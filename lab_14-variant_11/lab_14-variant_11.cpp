@@ -12,7 +12,7 @@ SearchResult binarySearch(int n, const int const *a, int count) {
     int high = count - 1;
     SearchResult searchResult;
 
-    while (low < high) {
+    while (low <= high) {
         searchResult.attemptsCount++;
         int mid = low + (high - low) / 2;
         if (a[mid] > n) {
@@ -27,7 +27,6 @@ SearchResult binarySearch(int n, const int const *a, int count) {
         }
     }
     return searchResult;
-
 }
 
 int main()
@@ -47,7 +46,7 @@ int main()
         }
     }
 
-    unsigned int n;
+    int n;
     cout << "Введіть число для пошуку: ";
     cin >> n;
 
